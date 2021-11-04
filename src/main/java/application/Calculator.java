@@ -61,4 +61,9 @@ public class Calculator {
         double val = i * i;
         return r * val;
     }
+
+    public double pAusUundR(double u, double r) {
+        double val = u * u;
+        return val / r;
+    }
 }
