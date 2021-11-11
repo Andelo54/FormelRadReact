@@ -52,7 +52,7 @@ public class Calculator {
 
     /* Hier die Methoden mit den Formlen hinzufügen
      */
-    //P calculate
+    //Calculate P
     public double pFromUandI(double u, double i) {
         return u * i;
     }
@@ -67,7 +67,7 @@ public class Calculator {
         return val / r;
     }
 
-    //Formulas with I
+    //Calculate I
     public double iFromPandU(double p, double u){
         return p / u;
     }
@@ -78,5 +78,10 @@ public class Calculator {
 
     public double iFromPandR(double p, double r){
         return Math.sqrt(p / r);
+    }
+
+    //Calculate R
+    public  double rFromUandI(double u,double i){
+        return u / i;
     }
 }
