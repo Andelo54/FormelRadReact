@@ -52,18 +52,31 @@ public class Calculator {
 
     /* Hier die Methoden mit den Formlen hinzufügen
      */
-    //P berechnen
-    public double pAusUundI(double u, double i) {
+    //P calculate
+    public double pFromUandI(double u, double i) {
         return u * i;
     }
 
-    public double pAusRundI(double r, double i){
+    public double pFromRandI(double r, double i){
         double val = i * i;
         return r * val;
     }
 
-    public double pAusUundR(double u, double r) {
+    public double pFromUandR(double u, double r) {
         double val = u * u;
         return val / r;
+    }
+
+    //Formulas with I
+    public double iFromPandU(double p, double u){
+        return p / u;
+    }
+
+    public double iFromUandR(double u, double r){
+        return u / r;
+    }
+
+    public double iFromPandR(double p, double r){
+        return Math.sqrt(p / r);
     }
 }
