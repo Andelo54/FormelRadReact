@@ -1,5 +1,4 @@
 package application;
-
 /**
  * Berechnet das Formelrad
  *
@@ -50,20 +49,25 @@ public class Calculator {
          */
     }
 
-    /* Hier die Methoden mit den Formlen hinzufügen
+    /* Hier die Methoden mit den Formlen hinzufÃ¼gen
      */
-    //P berechnen
-    public double pAusUundI(double u, double i) {
+    //Calculate P
+    public double pFromUandI(double u, double i) {
         return u * i;
     }
 
-    public double pAusRundI(double r, double i){
+    public double pFromRandI(double r, double i){
         double val = i * i;
         return r * val;
     }
 
-    public double pAusUundR(double u, double r) {
+    public double pFromUandR(double u, double r) {
         double val = u * u;
         return val / r;
+    }
+
+    //Calculate U
+    public  double uFromRandI(double r,double i){
+        return r * i;
     }
 }
