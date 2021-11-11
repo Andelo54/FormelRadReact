@@ -66,4 +66,9 @@ public class Calculator {
         double val = u * u;
         return val / r;
     }
+
+    //Formulas with I
+    public double iFromPandU(double p, double u){
+        return p / u;
+    }
 }
