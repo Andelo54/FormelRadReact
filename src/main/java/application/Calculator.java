@@ -84,4 +84,9 @@ public class Calculator {
     public  double rFromUandI(double u,double i){
         return u / i;
     }
+
+    public  double rFromPandI(double p,double i){
+        double val = i * i;
+        return p / val;
+    }
 }
