@@ -99,4 +99,8 @@ public class Calculator {
     public  double uFromRandI(double r,double i){
         return r * i;
     }
+
+    public  double uFromPandI(double p,double i){
+        return p / i;
+    }
 }
