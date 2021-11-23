@@ -68,6 +68,7 @@ public class Calculator {
         } else if (getStrom() > 0 && getSpannung() > 0) {
             pFromUandI(getSpannung(), getStrom());
             rFromUandI(getSpannung(), getStrom());
+            System.out.println("Berechnet: Leistung und Widerstand von Spannung und Strom. ");
         }
     }
 
