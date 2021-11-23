@@ -96,6 +96,10 @@ public class Main extends Application {
 					current = Double.parseDouble(txStrom.getText());
 					inputAmount++;
 				}
+				if (!txWiderstand.getText().isEmpty()) {
+					resistence = Double.parseDouble(txWiderstand.getText());
+					inputAmount++;
+				}
 				if(txLeistung.getText().isEmpty()==false) {
 					power = Double.parseDouble(txLeistung.getText());
 				}
