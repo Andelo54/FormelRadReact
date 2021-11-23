@@ -13,8 +13,8 @@ import javafx.scene.text.Font;
 
 /**
  * Formelrad Application
- * @author Peter Rutschmann
- * @version 22.10.2018
+ * @author David Kresic und Andelo Batinic
+ * @version 23.11.2021
  */
 public class Main extends Application {
 	@Override
