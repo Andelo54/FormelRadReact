@@ -92,6 +92,10 @@ public class Main extends Application {
 					tension = Double.parseDouble(txSpannung.getText());
 					inputAmount++;
 				}
+				if (!txStrom.getText().isEmpty()) {
+					current = Double.parseDouble(txStrom.getText());
+					inputAmount++;
+				}
 				if(txLeistung.getText().isEmpty()==false) {
 					power = Double.parseDouble(txLeistung.getText());
 				}
