@@ -100,35 +100,43 @@ public class Main extends Application {
 					resistence = Double.parseDouble(txWiderstand.getText());
 					inputAmount++;
 				}
-				if(txLeistung.getText().isEmpty()==false) {
-					power = Double.parseDouble(txLeistung.getText());
-				}
-				if(txSpannung.getText().isEmpty()==false) {
-					tension = Double.parseDouble(txSpannung.getText());
-				}
-				if(txStrom.getText().isEmpty()==false) {
-					current = Double.parseDouble(txStrom.getText());
-				}
-				if(txWiderstand.getText().isEmpty()==false) {
-					resistence = Double.parseDouble(txWiderstand.getText());
-				}
-				Calculator myCalculator = new Calculator(
-						power, tension, current, resistence);
+				if (inputAmount > 2 || inputAmount < 2) {
+					Alert alert = new Alert(AlertType.WARNING);
+					alert.setTitle("Warning");
+					alert.setHeaderText("Invalid Input");
+					alert.setContentText("Please enter 2 physical quantities");
+					alert.showAndWait();
+				} else {
 
-				if (power != myCalculator.getLeistung())
-					txLeistung.setStyle("-fx-text-inner-color: red;");
-				if (tension != myCalculator.getSpannung())
-					txSpannung.setStyle("-fx-text-inner-color: red;");
-				if (current != myCalculator.getStrom())
-					txStrom.setStyle("-fx-text-inner-color: red;");
-				if (resistence != myCalculator.getWiderstand())
-					txWiderstand.setStyle("-fx-text-inner-color: red;");
+					if (txLeistung.getText().isEmpty() == false) {
+						power = Double.parseDouble(txLeistung.getText());
+					}
+					if (txSpannung.getText().isEmpty() == false) {
+						tension = Double.parseDouble(txSpannung.getText());
+					}
+					if (txStrom.getText().isEmpty() == false) {
+						current = Double.parseDouble(txStrom.getText());
+					}
+					if (txWiderstand.getText().isEmpty() == false) {
+						resistence = Double.parseDouble(txWiderstand.getText());
+					}
+					Calculator myCalculator = new Calculator(
+							power, tension, current, resistence);
 
-				txLeistung.setText(Double.toString(myCalculator.getLeistung()));
-				txSpannung.setText(Double.toString(myCalculator.getSpannung()));
-				txStrom.setText(Double.toString(myCalculator.getStrom()));
-				txWiderstand.setText(Double.toString(myCalculator.getWiderstand()));
-			});
+					if (power != myCalculator.getLeistung())
+						txLeistung.setStyle("-fx-text-inner-color: red;");
+					if (tension != myCalculator.getSpannung())
+						txSpannung.setStyle("-fx-text-inner-color: red;");
+					if (current != myCalculator.getStrom())
+						txStrom.setStyle("-fx-text-inner-color: red;");
+					if (resistence != myCalculator.getWiderstand())
+						txWiderstand.setStyle("-fx-text-inner-color: red;");
+
+					txLeistung.setText(Double.toString(myCalculator.getLeistung()));
+					txSpannung.setText(Double.toString(myCalculator.getSpannung()));
+					txStrom.setText(Double.toString(myCalculator.getStrom()));
+					txWiderstand.setText(Double.toString(myCalculator.getWiderstand()));
+				}});
 
 			Scene scene = new Scene(root, 330, 490);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
