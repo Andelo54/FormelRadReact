@@ -82,6 +82,12 @@ public class Main extends Application {
 				double tension = 0.0;
 				double current = 0.0;
 				double resistence = 0.0;
+				Integer inputAmount = 0;
+
+				if (!txLeistung.getText().isEmpty()) {
+					power = Double.parseDouble(txLeistung.getText());
+					inputAmount++;
+				}
 				if(txLeistung.getText().isEmpty()==false) {
 					power = Double.parseDouble(txLeistung.getText());
 				}
