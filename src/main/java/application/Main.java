@@ -88,6 +88,10 @@ public class Main extends Application {
 					power = Double.parseDouble(txLeistung.getText());
 					inputAmount++;
 				}
+				if (!txSpannung.getText().isEmpty()) {
+					tension = Double.parseDouble(txSpannung.getText());
+					inputAmount++;
+				}
 				if(txLeistung.getText().isEmpty()==false) {
 					power = Double.parseDouble(txLeistung.getText());
 				}
