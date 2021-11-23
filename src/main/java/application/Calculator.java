@@ -50,7 +50,7 @@ public class Calculator {
          */
     }
 
-    /* Hier die Methoden mit den Formlen hinzufügen
+    /* Hier die Methoden mit den Formlen hinzufï¿½gen
      */
     //Calculate P
     public double pFromUandI(double u, double i) {
@@ -90,8 +90,22 @@ public class Calculator {
         return p / val;
     }
 
-    public  double rFromPandU(double p,double u){
+    public  double rFromPandU(double p,double u) {
         double val = u * u;
         return val / p;
+    }
+
+    //Calculate U
+    public  double uFromRandI(double r,double i){
+        return r * i;
+    }
+
+    public  double uFromPandI(double p,double i){
+        return p / i;
+    }
+
+    public  double uFromPandR(double p,double r){
+        double val = p * r;
+        return  Math.sqrt(val);
     }
 }
