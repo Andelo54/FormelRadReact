@@ -48,6 +48,25 @@ public class Calculator {
         /* Hier auf Grund der vorhanden Werte entscheiden
          * welche Methode unten aufgerufen werden muss.
          */
+        if(getLeistung() > 0 && getSpannung() > 0){
+            iFromPandU(getLeistung(), getSpannung());
+            rFromPandU(getLeistung(), getSpannung());
+        }else if(getStrom() > 0 && getWiderstand() > 0){
+            pFromRandI(getWiderstand(), getStrom());
+            uFromRandI(getWiderstand(), getStrom());
+        }else if(getLeistung() > 0 && getStrom() > 0){
+            uFromPandI(getLeistung(), getStrom());
+            rFromPandI(getLeistung(), getStrom());
+        }else if(getSpannung() > 0 && getWiderstand() > 0){
+            pFromUandR(getSpannung(), getWiderstand());
+            iFromUandR(getSpannung(), getWiderstand());
+        }else if(getLeistung() > 0 && getWiderstand() > 0){
+            uFromPandR(getLeistung(), getWiderstand());
+            iFromPandR(getLeistung(), getWiderstand());
+        }else if(getStrom() > 0 && getSpannung() > 0){
+            pFromUandI(getSpannung(), getStrom());
+            rFromUandI(getSpannung(), getStrom());
+        }
     }
 
     /* Hier die Methoden mit den Formlen hinzuf�gen
