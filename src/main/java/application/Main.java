@@ -125,14 +125,18 @@ public class Main extends Application {
 					Calculator myCalculator = new Calculator(
 							power, tension, current, resistence);
 
-					if (power != myCalculator.getLeistung())
+					if (txLeistung.getText().isEmpty() == true) {
 						txLeistung.setStyle("-fx-text-inner-color: red;");
-					if (tension != myCalculator.getSpannung())
+					}
+					if (txSpannung.getText().isEmpty() == true) {
 						txSpannung.setStyle("-fx-text-inner-color: red;");
-					if (current != myCalculator.getStrom())
+					}
+					if (txStrom.getText().isEmpty() == true) {
 						txStrom.setStyle("-fx-text-inner-color: red;");
-					if (resistence != myCalculator.getWiderstand())
+					}
+					if (txWiderstand.getText().isEmpty() == true) {
 						txWiderstand.setStyle("-fx-text-inner-color: red;");
+					}
 
 					txLeistung.setText(Double.toString(myCalculator.getLeistung()));
 					txSpannung.setText(Double.toString(myCalculator.getSpannung()));
