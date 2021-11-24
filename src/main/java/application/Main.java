@@ -84,7 +84,7 @@ public class Main extends Application {
 				double tension = 0.0;
 				double current = 0.0;
 				double resistence = 0.0;
-				Integer inputAmount = 0;
+				int inputAmount = 0;
 
 				if (!txLeistung.getText().isEmpty()) {
 					power = Double.parseDouble(txLeistung.getText());
@@ -124,24 +124,24 @@ public class Main extends Application {
 					}
 					Calculator myCalculator = new Calculator(
 							power, tension, current, resistence);
+					myCalculator.calculate();
 
 					if (txLeistung.getText().isEmpty() == true) {
+						txLeistung.setText(Double.toString(myCalculator.getLeistung()));
 						txLeistung.setStyle("-fx-text-inner-color: red;");
 					}
 					if (txSpannung.getText().isEmpty() == true) {
+						txSpannung.setText(Double.toString(myCalculator.getSpannung()));
 						txSpannung.setStyle("-fx-text-inner-color: red;");
 					}
 					if (txStrom.getText().isEmpty() == true) {
+						txStrom.setText(Double.toString(myCalculator.getStrom()));
 						txStrom.setStyle("-fx-text-inner-color: red;");
 					}
 					if (txWiderstand.getText().isEmpty() == true) {
+						txWiderstand.setText(Double.toString(myCalculator.getWiderstand()));
 						txWiderstand.setStyle("-fx-text-inner-color: red;");
 					}
-
-					txLeistung.setText(Double.toString(myCalculator.getLeistung()));
-					txSpannung.setText(Double.toString(myCalculator.getSpannung()));
-					txStrom.setText(Double.toString(myCalculator.getStrom()));
-					txWiderstand.setText(Double.toString(myCalculator.getWiderstand()));
 				}});
 
 			Scene scene = new Scene(root, 330, 490);
