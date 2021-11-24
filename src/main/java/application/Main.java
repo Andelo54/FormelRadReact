@@ -128,6 +128,9 @@ public class Main extends Application {
 					if (txLeistung.getText().isEmpty() == true) {
 						txLeistung.setStyle("-fx-text-inner-color: red;");
 					}
+					if (txSpannung.getText().isEmpty() == true) {
+						txSpannung.setStyle("-fx-text-inner-color: red;");
+					}
 
 					txLeistung.setText(Double.toString(myCalculator.getLeistung()));
 					txSpannung.setText(Double.toString(myCalculator.getSpannung()));
