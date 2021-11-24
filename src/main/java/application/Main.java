@@ -80,6 +80,31 @@ public class Main extends Application {
             btnBerechnen.setText("Berechnen");
             root.getChildren().add(btnBerechnen);
 
+            Button btnLoeschen = new Button();
+            btnLoeschen.relocate(238, 445);
+            btnLoeschen.setText("Löschen");
+            root.getChildren().add(btnLoeschen);
+
+            btnLoeschen.setOnAction(e -> {
+                txLeistung.setText("");
+                txSpannung.setText("");
+                txStrom.setText("");
+                txWiderstand.setText("");
+
+                if (txLeistung.getText().isEmpty()) {
+                    txLeistung.setStyle("-fx-text-inner-color: black;");
+                }
+                if (txSpannung.getText().isEmpty()) {
+                    txSpannung.setStyle("-fx-text-inner-color: black;");
+                }
+                if (txStrom.getText().isEmpty()) {
+                    txStrom.setStyle("-fx-text-inner-color: black;");
+                }
+                if (txWiderstand.getText().isEmpty()) {
+                    txWiderstand.setStyle("-fx-text-inner-color: black;");
+                }
+            });
+
             btnBerechnen.setOnAction(e -> {
                 double power = 0.0;
                 double tension = 0.0;
