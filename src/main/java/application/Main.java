@@ -90,7 +90,20 @@ public class Main extends Application {
                 txSpannung.setText("");
                 txStrom.setText("");
                 txWiderstand.setText("");
-                    });
+
+                if (txLeistung.getText().isEmpty()) {
+                    txLeistung.setStyle("-fx-text-inner-color: black;");
+                }
+                if (txSpannung.getText().isEmpty()) {
+                    txSpannung.setStyle("-fx-text-inner-color: black;");
+                }
+                if (txStrom.getText().isEmpty()) {
+                    txStrom.setStyle("-fx-text-inner-color: black;");
+                }
+                if (txWiderstand.getText().isEmpty()) {
+                    txWiderstand.setStyle("-fx-text-inner-color: black;");
+                }
+            });
 
             btnBerechnen.setOnAction(e -> {
                 double power = 0.0;
